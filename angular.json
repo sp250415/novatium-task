@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "indent"
+  "defaultProject": "indent",
+  "cli": {
+    "analytics": "b2f19569-e8e2-4bf1-aeae-0502fae94808"
+  }
 }

@@ -1,0 +1,22 @@
+<div style="padding: 20%;"> <h3>Login</h3>
+  <div class="card">
+    <form [formGroup]="loginForm">
+      <div>
+        <label>Username :</label>
+        <input type="text" class="form-control" formControlName="username" placeholder="Enter Username">
+      </div>
+      &nbsp;
+      <div>
+        <label>Password : </label>
+        <input type="password" class="form-control" formControlName="password" placeholder="Enter Password">
+      </div>
+      &nbsp;
+      <div>
+        <button type="submit" (click)="submit()" style="color: tomato;">Login</button>
+        &nbsp;
+        Not a user?
+        <button routerLink="/signup" style="color: steelblue;">Sign Up</button>
+      </div>
+    </form>
+  </div>
+</div>

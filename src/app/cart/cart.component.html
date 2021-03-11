@@ -1,0 +1,18 @@
+<div style="border: 2px solid springgreen;width: 50%;">
+  <div style="text-align: center;">
+    <h3>MyCart</h3>
+  </div>
+
+  <div style="border: 2px solid blue;padding: 10px;width: 35%;margin-left: 28%;" *ngFor="let item of cartList">
+    Name: {{item.name}} <br>
+    Price: {{item.price}} <br>
+    Quantity: {{item.qty}}
+  </div>
+  <div style="margin-left:52%">Total Price: {{totalPrice}}</div>
+  &nbsp;
+  <div style="text-align:center;">
+    <button (click)="confirm()">Confirm Order</button>
+    &nbsp;
+    <button (click)="back()">Back</button>
+  </div>
+</div>

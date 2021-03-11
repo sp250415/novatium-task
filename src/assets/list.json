@@ -1,0 +1,25 @@
+[{
+  "code" : "1",
+  "name" : "Appalam",
+  "price": "50.00"
+},
+{
+  "code" : "2",
+  "name" : "Aachi chilli podi",
+  "price" : "30.00"
+},
+{
+  "code" : "3",
+  "name" : "Milk",
+  "price" : "30.00"
+},
+{
+  "code" : "4",
+  "name" : "Curd",
+  "price" : "10.00"
+},
+{
+  "code" : "5",
+  "name" : "Cookies",
+  "price" : "30.00"
+}]
