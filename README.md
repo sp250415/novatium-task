@@ -28,8 +28,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## To run Backend
 
-Goto **server** and give **node server.js**
+1. npm install cors
+2. Goto **server** and give **node server.js**
+
 
 ## To run Frontend
 
-Type **ng serve** from the folder path.
+1. npm install
+2. Type **ng serve** from the folder path.
