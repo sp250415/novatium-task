@@ -38,6 +38,20 @@ export class CartComponent implements OnInit {
     });
   }
   confirm() {
+    let payload = {
+      'id' : this.userID,
+      'orderedItems' : this.cartList
+    }
+    this.loginService.postOrder(payload).subscribe((data:any) => {
+      if(data.success){
+        let value = {
+          'id' : this.userID,
+          'prodList': []
+        }
+        this.loginService.postCart(value).subscribe((data: any) => {
+        })
+       }
+    });
     alert('Your order Has been placed!!')
     this.router.navigate(['/login']);
   }

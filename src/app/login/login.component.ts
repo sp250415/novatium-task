@@ -27,12 +27,9 @@ export class LoginComponent implements OnInit {
   }
 
   submit(){
-    console.log(this.loginForm.value)
     this.loginService.postLogin(this.loginForm.value).subscribe((data:any)=>{
-      console.log(data)
       if(data.success){
         let user_id = JSON.stringify(data.data._id);
-        console.log(data.data._id)
         alert('Login Successful');
         localStorage.setItem('user_id' , user_id)
         this.router.navigate(['/list']);

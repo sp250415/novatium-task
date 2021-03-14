@@ -24,7 +24,6 @@ export class SignupComponent implements OnInit {
 
   submit() {
     this.loginService.postSignUp(this.signUpForm.value).subscribe((data: any) => {
-      console.log(data)
       if (data.success) {
         alert('User Created!!');
         this.router.navigate(['/login']);

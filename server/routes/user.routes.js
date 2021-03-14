@@ -17,4 +17,8 @@ module.exports = function (express) {
   //GetCartProducts
   express
     .get('/getCart', auth.getCartProducts)
+
+  //PostOrder
+  express
+    .post('/postOrder', auth.postOrder)
 }

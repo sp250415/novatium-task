@@ -2,9 +2,7 @@ const ObjectId = require('mongodb').ObjectID;
 
 module.exports = {
   create: (req, res) => {
-    console.log(req.app)
     db = req.app.get('mongoInstance')
-    console.log(db)
     var myobj = req.body;
     db.collection("users").insertOne(myobj, function (err, result) {
       if (err) {
@@ -66,9 +64,7 @@ module.exports = {
 
   getCartProducts: (req, res) => {
     db = req.app.get('mongoInstance')
-    console.log(req.query)
     let myobj = req.query;
-    console.log(myobj.id)
     db.collection("users").findOne({
       '_id': ObjectId(myobj.id)
     }, function (err, result) {
@@ -83,6 +79,20 @@ module.exports = {
             data: result
           });
         }
+      }
+    })
+  },
+
+  postOrder: (req,res) => {
+    db = req.app.get('mongoInstance')
+    let orderObj = req.body;
+    db.collection("orders").insertOne(orderObj, function (err , result) {
+      if(err){
+        res.send("Error Placing order");
+      }else{
+        res.send({
+          success: true,
+          data:result});
       }
     })
   }

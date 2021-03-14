@@ -23,7 +23,6 @@ export class ListComponent implements OnInit {
 
   getListData() {
     this.listService.postList().subscribe(data => {
-      console.log(data)
       this.prodList = data;
     })
   }
@@ -42,7 +41,6 @@ export class ListComponent implements OnInit {
     }
 
     this.loginService.postCart(payload).subscribe((data: any) => {
-      console.log(data)
     })
   }
 
