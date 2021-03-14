@@ -27,7 +27,7 @@ export class CartComponent implements OnInit {
       'id': this.userID
     }
     this.loginService.getCartListProd(id).subscribe((data: any) => {
-      if (data.data.cart) {
+      if (data.data.cart != 0) {
         this.cartList = data.data.cart;
         this.totalPrice = 0;
         this.cartList.forEach((item: any) => this.totalPrice += item.totalPrice);
